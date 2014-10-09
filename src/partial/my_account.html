@@ -1,0 +1,25 @@
+<div class="panel panel-default">
+  <!-- Default panel contents -->
+  <div class="panel-heading">My Bookings</div>
+  <div class="panel-body">
+	<div ng-hide="fetched_bookings">
+		{{fetched_bookings}}
+		<img src="images/SpinningWheel.gif" class="img-responsive" alt="Responsive image">
+	</div>
+
+  <!-- Table -->
+  <table class="table" ng-show="fetched_bookings">
+  	<tr>
+  		<th><button type="button" class="btn btn-success" ng-click="cancelSelected()">Cancel</button></th><th>Booking ID</th><th>Pickup DateTime</th><th>Source</th><th>Destination</th>
+	</tr>
+	<tr data-ng-repeat="element in booking_history " ng-class="getSelectedClass(element[0])">
+                <td><input type="checkbox" name="selected" ng-checked="isSelected(element[0])"
+                			ng-click="updateSelection(element[0])"></td>
+                <td>{{element[0]}}</td>
+                <td>{{element[1]}}</td>
+                <td>{{element[2]}}</td>
+                <td>{{element[3]}}</td>
+            </tr>  
+   </table>
+  </div>
+</div>

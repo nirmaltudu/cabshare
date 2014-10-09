@@ -1,0 +1,14 @@
+
+    <div class="col-lg-10">
+	<div class="panel panel-default">
+  		<div class="panel-heading"><h4>{{pickup}}</h4></div>
+  		<div class="panel-body">
+			<map center="[17.4295317, 78.4126599]" zoom="15">
+  			<!-- ngRepeat: p in positions -->
+  			<marker ng-repeat="p in positions" title="{{pickup}}" position="{{p}}" animation="Animation.BOUNCE" centered="true">
+  			</marker>
+  			<!-- end ngRepeat: p in positions -->
+  			</map>
+  		</div>
+	</div>
+</div>

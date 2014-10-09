@@ -1,0 +1,61 @@
+<div class="container">
+    <div class="row">
+        <div class="col-lg-4">
+			<div class="panel panel-default">
+  				<div class="panel-heading">{{pickup}}</div>
+  				<div class="panel-body">
+  				<form role="form">
+  					<div class="form-group">
+    					<label class="control-label">
+    						<i class="glyphicon glyphicon-globe"></i> Pickup Location
+    					</label><br>
+  					<div class="input-group">
+      						<span class="input-group-btn">
+        						<button class="btn btn-default" type="button" ng-click="setMarker(details['geometry']['location'])"><i class="glyphicon glyphicon-map-marker"></i></button>
+      						</span>
+      						<input type="text" id="Autocomplete" class="form-control" ng-autocomplete ng-model="$parent.pickup" details="details" options="hyd_option">
+ 
+    				</div><!-- /input-group -->
+    				</div>
+  					
+           		  	<div class="form-group">
+    					<label class="control-label">
+    						<i class="glyphicon glyphicon-calendar"></i> Pickup Date
+    					</label><br>
+    					<div class="form-group">
+      						<input type="text" class="form-control" ng-model="pickup_date" data-min-date="{{today}}" placeholder="From" bs-datepicker>
+    					</div>
+  					</div>
+  					<div class="form-group" ng-class="{'has-error': timepickerForm.time.$invalid}">
+    					<label class="control-label"><i class="glyphicon glyphicon-time"></i> Time </label>
+    					<input type="text" class="form-control" minuteStep="1" ng-model="time" data-show-meridian="false" name="time" bs-timepicker>
+  					</div>
+  					<div class="form-group">
+    					<label class="control-label">
+    						<i class="glyphicon glyphicon-phone"></i> Mobile No
+    					</label><br>
+  						<div class="input-group">
+						<span class="input-group-addon">+91</span>
+  						<input type="text" class="form-control" placeholder="Mobile No" ng-scope ng-model="mobile_no">
+  						</div>
+  					</div>
+  					<div class="form-group">
+    					<label for="exampleInputEmail1"><i class="glyphicon glyphicon-envelope"></i> Email address</label>
+    						<input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email" ng-model="email_address">
+  					</div>
+  					<div class="form-group">
+    					<label class="control-label"><i class="glyphicon glyphicon-home"></i> Address </label>
+    					<textarea class="form-control" row="8" ng-model="address"></textarea>
+  					</div>
+  					<div class="form-group">
+    					<label class="control-label"><i class="glyphicon glyphicon-check"></i> To Airport? </label>
+    					<input type="checkbox" ng-model="to_airport">
+  					</div>
+  					<!-- <button  ng-click="submit(mobile_no, email_address, address, to_airport)" type="submit" class="btn btn-default">Submit</button>-->
+  					<button  ng-click="take_bookings(mobile_no, email_address, address, to_airport)" type="submit" class="btn btn-default">Submit</button>
+				</form>
+  				</div>
+			</div>
+		</div>
+	</div>
+</div>

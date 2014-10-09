@@ -1,0 +1,21 @@
+application: secret-robot-524
+version: 2
+runtime: python27
+api_version: 1
+threadsafe: true
+
+handlers:
+- url: /css
+  static_dir: css
+- url: /images
+  static_dir: images
+- url: /js
+  static_dir: js
+- url: /partial
+  static_dir: partial
+- url: /.*
+  script: cabshare.application
+    
+libraries:
+- name: webapp2
+  version: latest

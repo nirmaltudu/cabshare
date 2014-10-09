@@ -1,0 +1,29 @@
+<div class="panel panel-default">
+  <!-- Default panel contents -->
+  <!-- <div class="panel-heading">Confirm booking</div>-->
+  <div class="panel-body">
+
+  <!-- Table -->
+  <table class="table">
+	<tr>
+	<th><button  ng-click="submit()" type="submit" class="btn btn-default" ng-show="booking_id == -1">Confirm</button></th>
+	<th><span class="label label-default" ng-show="booking_id != -1"><i class="glyphicon glyphicon-ok"></i> Booking ID: {{booking_id}}</span></th>
+	</tr>
+  	<tr>
+  	    <td>Pickup Location</td><td>{{pickup}}</td>
+  	</tr>
+  	<tr>
+  	    <td>Pickup Date</td><td>{{pickup_date}}</td>
+  	</tr>
+  	<tr>
+  	    <td>Pickup Time</td><td>{{time}}</td>
+  	</tr>
+  	<tr>
+  	    <td>Mobile No</td><td>{{mobile_no}}</td>
+  	</tr>
+  	<tr>
+  	    <td>Email</td><td>{{email_address}}</td>
+	</tr>
+   </table>
+  </div>
+</div>

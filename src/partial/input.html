@@ -1,0 +1,22 @@
+    <div class="jumbotron">
+    	<h2><span class="label label-danger">Shared <span class="badge">42</span></span></h2>
+		<form id="form" role="form">
+    		<div class="form-group move-down">
+        		<label for="Autocomplete">Pickup location</label>
+        		<div class="row">
+  					<div class="col-lg-4">
+    					<div class="input-group">
+      						<span class="input-group-btn">
+        						<button class="btn btn-default" type="button" ng-click="setMarker(details['geometry']['location'])"><i class="glyphicon glyphicon-map-marker"></i></button>
+      						</span>
+      						<input type="text" id="Autocomplete" class="form-control" ng-autocomplete ng-model="$parent.pickup" details="details" options="hyd_option">
+ 
+    					</div><!-- /input-group -->
+  					</div><!-- /.col-lg-6 -->
+				</div><!-- /.row -->        
+    		</div>
+		</form>
+    <!-- <div class="bg">
+    </div>-->
+    </div>
+    
